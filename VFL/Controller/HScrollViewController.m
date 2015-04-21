@@ -36,10 +36,10 @@
     view1.translatesAutoresizingMaskIntoConstraints=NO;
     [scrollview addSubview:view1];
     view1.backgroundColor=[UIColor redColor];
-    [scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view1(==width)]"
+    [scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view1(==scrollview)]"
                                                                        options:0
-                                                                       metrics:@{@"width":@(self.view.frame.size.width)}
-                                                                       views:NSDictionaryOfVariableBindings(view1)]];
+                                                                       metrics:nil
+                                                                       views:NSDictionaryOfVariableBindings(view1,scrollview)]];
     [scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view1(==200)]"
                                                                        options:0
                                                                        metrics:nil
